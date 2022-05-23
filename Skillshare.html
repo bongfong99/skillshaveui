@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillshare UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #F7F6F2;
+        }
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            width: 70%;
+            padding-top: 50px;
+        }
+        .main {
+            width: 100%;
+        }
+        /* Image */
+        .profile-header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .card-body img {
+            width: 300px;
+            display: block;
+           
+        }
+
+        .card img {
+           display: block;
+           width: 100%;
+           object-fit: cover;
+           border-top-left-radius: 9px;
+           border-top-right-radius: 9px;
+           transition: .5s ease;
+
+       }
+    
+        /* Text */
+        .card-title {
+           display: flex;
+           justify-content: space-between;
+           margin: 4px;
+       }
+       .card h3 {
+           text-align: left;
+           margin: 4px;
+       }
+       .text-muted {
+        color: #6c757d 
+        }
+
+       .profile-body {
+        border-bottom: 1px solid #6c757d ;
+        padding: 5px 4px;
+       }
+
+       .profile-body,.profile-header,.profile-footer,.follow {
+           text-align: center;
+           justify-content: center;
+           align-items: center;
+           width: 90%;
+       }
+
+
+       .follow {
+           display: flex;
+           flex: 1;
+           justify-content: space-around;
+           margin: 0 auto;
+           padding-top: 16px;
+           
+       }
+       .follow h3 {
+           font-weight: bold;
+           font-size: 1.5rem;
+       }
+        /* About section */
+
+       .about {
+           display: flex;
+           flex: 1;
+           flex-direction: column;
+           
+       }
+       .about-dec {
+           padding-top: 12px;
+           width: 80%;
+       }
+       .teach {
+           padding-top: 120px;
+       }
+       .teach-body {
+           padding-top: 20px;
+           display: flex;
+           flex-direction: row;
+           align-items: stretch;
+       }
+       .card {
+            display: inline-block;
+           width: 250px;
+           background-color: #fff;
+           border-radius: 9px;
+           box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+           margin-right: 20px;
+           transition: all 0.5s ease;
+           position: relative;
+       }
+
+       .profile-title,.profile-dec,.btn-follow-section,.btn-skill-section {
+           padding: 12px;
+       }
+
+       .profile-footer {
+           padding: 16px;
+       }
+       /* Button */
+       .btn-skill,.profile-footer,.btn-follow{
+           text-decoration: none;
+       }
+       .btn-skill {
+           background-color: #191A19;
+           color:  #9AE66E;
+           padding: 6px 12px;
+           border-radius: 9px;
+           font-weight: bold;
+       }
+       .btn-follow {
+           background-color: #0E3EDA;
+           color: #fff;
+           padding: 9px 16px;
+           border-radius: 16px;
+           font-weight: bold;
+       }
+       .social-icon {
+           padding-top: 20px;
+           justify-content: center;
+           text-align: center;
+           width: 90%;
+       }
+       .social-icon i {
+           margin: 4px;
+       }
+
+       .card:hover {
+        box-shadow: 19px 5px 25px -7px rgba(0,0,0,0.1),
+        0px 10px 15px -3px rgba(0,0,0,0.1),
+        0px 10px 15px -3px rgba(0,0,0,0.1);
+       }
+
+       .card-body:hover .image{
+            opacity: 0.8;
+        }
+
+       .card-body:hover .image-overlay {
+           opacity: 1;
+       }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 60px;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.3s;
+            
+        }
+
+        .image-overlay i {
+            font-size: 2rem;
+            color: #fff;
+        }
+      
+        .bookmark {
+            padding-top: 16px;
+            margin-right: 12px;
+            text-align: right;
+            font-size: 1.5rem;
+        }
+
+  
+        @media screen and (max-width: 768px){
+            .container {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+            }
+            .teach-body {
+                display: flex;
+                flex: 1;
+                flex-direction: row;
+                flex-wrap: wrap;
+                
+            }
+            .card {
+                width: 200px;
+                margin: 10px;
+            }
+            .card h3 {
+                font-size: 16px;
+                text-align: center;
+            }
+            .about,.about-dec{
+                text-align: center;
+                align-items: center;
+            }
+       
+        } 
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="profile">
+                <div class="profile-header">
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+
+                </div>
+                <div class="profile-body">
+                   <div class="profile-title">
+                       <h3>Tongfong hann</h3>
+                   </div>
+                   <div class="profile-dec">
+                       <p>Freelance Videographer and Creator</p>
+                       <div class="btn-skill-section">
+                        <a href="" class="btn-skill">Teacher</a>
+                       </div>
+                   </div>
+                   <div class="btn-follow-section">
+                       <a href="" class="btn-follow">Following</a>
+                   </div>
+                   <div class="follow">
+                    <div class="follower">
+                        <h3>2,902</h3>
+                        <span>Followers</span>
+                    </div>
+                    <div class="following">
+                        <h3>10</h3>
+                        <span>Following</span>
+                   </div>
+                </div>
+                </div>
+                <div class="profile-footer">
+                    <a href="" class="text-muted profile-footer">tongfonghann.com</a>
+                    <!-- Social icon -->
+                   <div class="social-icon">
+                    <i class="fa-brands fa-instagram icon"></i>
+                    <i class="fa-brands fa-youtube icon"></i>
+                    <i class="fa-solid fa-earth-asia icon"></i>
+                   </div>
+                </div>
+            </div>
+            <div class="about">
+                <h1>About Me</h1>
+                <div class="about-dec">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum consequuntur nostrum reiciendis quidem eos labore accusamus aliquam sapiente excepturi explicabo.
+                </div>
+                <div class="teach">
+                    <h1>Teaching</h1>
+                   <div class="teach-body">
+                    <div class="card">
+                        <div class="card-header">
+                        <div class="card-body">
+                            <img src="https://images.unsplash.com/photo-1559932707-dee26954b80a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="image">
+                            <div class="image-overlay">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                           <div class="card-title">
+                            <span>1,835 students</span>
+                            <span>24m</span>
+                           </div>
+                           <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, assumenda! Lorem ipsum dolor sit amet.</h3>
+                        </div>
+                        <div class="bookmark">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-body">                    
+                                <img src="https://images.unsplash.com/photo-1584608178349-a9da24902d86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="image">
+                            <div class="image-overlay">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </div>
+                        </div>
+                           <div class="card-title">
+                            <span>1,835 students</span>
+                            <span>24m</span>
+                           </div>
+                           <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, assumenda! Lorem8</h3>
+                        </div>
+                        <div class="bookmark">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                        <div class="card-body">
+                            <img src="https://images.unsplash.com/photo-1613563459434-845436343b84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="image">
+                            <div class="image-overlay">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </div>
+                            </div>
+                           <div class="card-title">
+                            <span>1,835 students</span>
+                            <span>24m</span>
+                           </div>
+                           <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, assumenda!</h3>
+                        </div>
+                        <div class="bookmark">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
